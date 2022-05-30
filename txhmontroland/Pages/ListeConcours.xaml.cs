@@ -37,5 +37,10 @@ namespace txhmontroland.Pages
             CodeConcour c = AdoConcours.getOneLight(Convert.ToInt32(id));
             mainWindow_.Content = new RecapConcours(mainWindow_, c);
         }
+
+        private void btn_retour_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow_.Content = new Accueil(mainWindow_);
+        }
     }
 }

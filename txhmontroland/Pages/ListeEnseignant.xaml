@@ -22,14 +22,8 @@
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="130" />
-                    <ColumnDefinition Width="90" />
-                    <ColumnDefinition Width="10" />
-                    <ColumnDefinition Width="180" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Content="Enseignants" Grid.Row="0" FontWeight="Bold" FontSize="18" Margin="16,25,3,19"  />
+                <Label Content="Enseignants" Grid.Row="0" FontWeight="Bold" FontSize="40" Margin="835,6,836,10"  />
+                <Button x:Name="btn_retour" Grid.Column="0" Content="Retour" Foreground="White" BorderBrush="{x:Null}" Background="#FFFFCF00" Click="btn_retour_Click" Margin="30,19,1755,19" FontSize="25"/>
             </Grid>
 
         </Grid>
@@ -45,7 +39,7 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="10" />
             </Grid.RowDefinitions>
-            <DataGrid Grid.Column="1"  AutoGenerateColumns="False" Grid.Row="1" x:Name="dg_joueurs" IsReadOnly="True" FontSize="15" Grid.ColumnSpan="2" >
+            <DataGrid Grid.Column="1"  AutoGenerateColumns="False" Grid.Row="1" x:Name="dg_joueurs" IsReadOnly="True" FontSize="25" Grid.ColumnSpan="2" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding nom}" Width="*">
                         <DataGridTextColumn.HeaderStyle>

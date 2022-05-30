@@ -1,6 +1,6 @@
 ﻿<Page
     Title="ListeClasse"
-    d:DesignHeight="1080"
+    d:DesignHeight="1016"
     d:DesignWidth="1920"
     mc:Ignorable="d"
     x:Class="txhmontroland.Pages.ListeClasse"
@@ -33,35 +33,27 @@
                 </Grid.ColumnDefinitions>
                 <Label
                     Content="MEF"
-                    FontSize="18"
+                    FontSize="70"
                     FontWeight="Bold"
-                    Grid.Column="0"
+                    Grid.Column="4"
                     Grid.Row="0"
-                    Margin="16,25,3,19" />
-                <Button x:Name="btn_refresh" Grid.Column="4" Content="Refraichirr" HorizontalAlignment="Left" Height="20" Margin="276,7,0,0" VerticalAlignment="Top" Width="99" Click="btn_refresh_Click"/>
+                    Margin="457,15,883,-26" />
+                <Button x:Name="btn_refresh" Grid.Column="3" Content="Refraichirr" HorizontalAlignment="Left" Height="49" Margin="146,0,0,0" VerticalAlignment="Center" Width="202" Click="btn_refresh_Click" FontSize="25" Grid.ColumnSpan="2"/>
             </Grid>
 
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="15" />
-                <ColumnDefinition Width="37*" />
-                <ColumnDefinition Width="18*" />
-                <ColumnDefinition Width="15" />
+                <ColumnDefinition Width="121*"/>
+                <ColumnDefinition Width="839*"/>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="10" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="10" />
-            </Grid.RowDefinitions>
+
             <DataGrid
                 AutoGenerateColumns="False"
-                FontSize="15"
-                Grid.Column="1"
-                Grid.Row="1"
+                FontSize="25"
                 IsReadOnly="True"
-                Margin="0,0,1,0"
-                x:Name="dg_classes">
+                Margin="0,80,1,0"
+                x:Name="dg_classes" Grid.ColumnSpan="2">
                 <DataGrid.Columns>
                     <DataGridTextColumn
                         Binding="{Binding nom_classe}"
@@ -161,81 +153,59 @@
                 </DataGrid.Columns>
             </DataGrid>
             <Grid
-                Grid.Column="2"
-                Grid.Row="1"
-                Height="228"
+                Height="125"
                 HorizontalAlignment="Left"
-                Margin="15,8,0,0"
+                Margin="497,-43,0,0"
                 VerticalAlignment="Top"
-                Width="auto">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
+                Width="auto" Grid.Column="1">
+
                 <Label
                     Content="Dotation principale :"
                     FontFamily="Arial"
-                    FontSize="15"
-                    Margin="2,3,81,45" />
+                    FontSize="25"
+                    Margin="460,-38,-300,127" />
                 <TextBox
                     LostFocus="tbx_dota_principale_LostFocus"
-                    Margin="5,32,81,13"
-                    x:Name="tbx_dota_principale" />
+                    Margin="465,-2,-288,85"
+                    x:Name="tbx_dota_principale" FontSize="25" />
 
                 <Label
                     Content="DDFPT"
                     FontFamily="Arial"
-                    FontSize="15"
-                    Grid.Row="1"
-                    Height="26"
-                    HorizontalAlignment="Left"
-                    Margin="6,5,0,0"
-                    VerticalAlignment="Top"
-                    Width="74" />
+                    FontSize="25"
+                    Margin="590,41,-299,50" />
                 <Label
                     Content="DOC"
                     FontFamily="Arial"
-                    FontSize="15"
-                    Grid.Row="1"
-                    Height="26"
-                    HorizontalAlignment="Left"
-                    Margin="97,5,0,0"
-                    VerticalAlignment="Top"
-                    Width="74" />
+                    FontSize="25"
+                    Margin="941,41,-624,47" />
                 <TextBox
-                    Grid.Row="1"
                     LostFocus="tbx_DDFPT_LostFocus"
-                    Margin="5,32,150,13"
-                    x:Name="tbx_DDFPT" />
+                    Margin="524,75,-369,8"
+                    x:Name="tbx_DDFPT" FontSize="25" />
                 <TextBox
-                    Grid.Row="1"
                     LostFocus="tbx_DOC_LostFocus"
-                    Margin="100,32,50,13"
-                    x:Name="tbx_DOC" />
-
-                <Label
-                    Content="Total assigné"
-                    FontFamily="Arial"
-                    FontSize="15"
-                    Grid.Row="2" />
+                    Margin="879,75,-688,8"
+                    x:Name="tbx_DOC" FontSize="25" />
                 <TextBox
-                    Grid.Row="2"
                     IsReadOnly="True"
-                    Margin="5,32,150,13"
-                    x:Name="tbx_total" />
+                    Margin="737,-1,-512,84"
+                    x:Name="tbx_total" FontSize="25" />
                 <Label
-                    Content="Reste"
+                    Content="Reste :"
                     FontFamily="Arial"
-                    FontSize="15"
-                    Grid.Row="2"
-                    Margin="105,1,50,50" />
+                    FontSize="25"
+                    Margin="968,-37,-674,127" />
                 <TextBox
-                    Grid.Row="2"
                     IsReadOnly="True"
-                    Margin="105,32,50,13"
-                    x:Name="tbx_reste" />
+                    Margin="963,-3,-687,86"
+                    x:Name="tbx_reste" FontSize="25" />
             </Grid>
+            <Label
+                    Content="Total assigné :"
+                    FontFamily="Arial"
+                    FontSize="25" Margin="1230,-79,89,975" Grid.Column="1" />
         </Grid>
+        <Button x:Name="btn_retour" Grid.Column="0" Content="Retour" Height="47" Width="148" Foreground="White" BorderBrush="{x:Null}" Background="#FFFFCF00" Click="btn_retour_Click" Margin="36,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25"/>
     </Grid>
 </Page>

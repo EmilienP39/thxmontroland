@@ -109,57 +109,79 @@ namespace txhmontroland.Pages
         }
         private void cbx_groupe_click(object sender, RoutedEventArgs e)
         {
-            Enseignant enseignant = new Enseignant();
-            Matiere matiere = new Matiere();
+            string cbx_name = ((CheckBox)sender).Name;
             WrapPanel parent = (WrapPanel)((CheckBox)sender).Parent;
-            foreach (UIElement uiElement in (parent.Children))
+            if (((CheckBox)sender).IsChecked == true)
             {
-                if (uiElement.GetType() == typeof(ComboBox))
+                Enseignant enseignant = new Enseignant();
+                Matiere matiere = new Matiere();
+                WrapPanel wrapPanel1 = (WrapPanel)((CheckBox)sender).Parent;
+                wrapPanel1.Name = "Wrap_" + cbx_name;
+
+                foreach (UIElement uiElement in (parent.Children))
                 {
-                    if (((ComboBox)uiElement).Name == "cb_enseignants")
+                    if (uiElement.GetType() == typeof(ComboBox))
                     {
-                        enseignant = (Enseignant)((ComboBox)uiElement).SelectedItem;
-                    }
-                    if (((ComboBox)uiElement).Name == "cb_matieres")
-                    {
-                        matiere = (Matiere)((ComboBox)uiElement).SelectedItem;
+                        if (((ComboBox)uiElement).Name == "cb_enseignants")
+                        {
+                            enseignant = (Enseignant)((ComboBox)uiElement).SelectedItem;
+                        }
+                        if (((ComboBox)uiElement).Name == "cb_matieres")
+                        {
+                            matiere = (Matiere)((ComboBox)uiElement).SelectedItem;
+                        }
                     }
                 }
+                ComboBox cb_matieres = new ComboBox();
+                cb_matieres.Name = "cb_matieres";
+                cb_matieres.Width = 194;
+                cb_matieres.Height = 30;
+                cb_matieres.Margin = new Thickness(10);
+                cb_matieres.ItemsSource = this.matieres1;
+                cb_matieres.IsReadOnly = true;
+                cb_matieres.FontSize = 15;
+                cb_matieres.SelectedItem = matiere;
+
+                ComboBox cb_enseignants = new ComboBox();
+                cb_enseignants.Name = "cb_enseignants";
+                cb_enseignants.Width = 194;
+                cb_enseignants.Height = 30;
+                cb_enseignants.Margin = new Thickness(10);
+                cb_enseignants.ItemsSource = this.enseignants;
+                cb_enseignants.IsReadOnly = true;
+                cb_enseignants.FontSize = 15;
+                cb_enseignants.SelectedItem = this.enseignants.First(x => x.id == enseignant.id);
+
+                ComboBox cb_classes = new ComboBox();
+                cb_classes.Name = "cb_classes";
+                cb_classes.Width = 194;
+                cb_classes.Height = 30;
+                cb_classes.Margin = new Thickness(10);
+                cb_classes.FontSize = 15;
+                cb_classes.ItemsSource = this.classes;
+
+                WrapPanel wrapPanel = new WrapPanel();
+                stack_groupe.Children.Add(wrapPanel);
+
+                wrapPanel.Children.Add(cb_classes);
+                wrapPanel.Children.Add(cb_enseignants);
+                wrapPanel.Children.Add(cb_matieres);
             }
-            ComboBox cb_matieres = new ComboBox();
-            cb_matieres.Name = "cb_matieres";
-            cb_matieres.Width = 194;
-            cb_matieres.Height = 30;
-            cb_matieres.Margin = new Thickness(10);
-            cb_matieres.ItemsSource = this.matieres1;
-            cb_matieres.IsReadOnly = true;
-            cb_matieres.FontSize = 15;
-            cb_matieres.SelectedItem = matiere;
-
-            ComboBox cb_enseignants = new ComboBox();
-            cb_enseignants.Name = "cb_enseignants";
-            cb_enseignants.Width = 194;
-            cb_enseignants.Height = 30;
-            cb_enseignants.Margin = new Thickness(10);
-            cb_enseignants.ItemsSource = this.enseignants;
-            cb_enseignants.IsReadOnly = true;
-            cb_enseignants.FontSize = 15;
-            cb_enseignants.SelectedItem = this.enseignants.First(x => x.id == enseignant.id);
-
-            ComboBox cb_classes = new ComboBox();
-            cb_classes.Name = "cb_classes";
-            cb_classes.Width = 194;
-            cb_classes.Height = 30;
-            cb_classes.Margin = new Thickness(10);
-            cb_classes.FontSize = 15;
-            cb_classes.ItemsSource = this.classes;
-
-            WrapPanel wrapPanel = new WrapPanel();
-            stack_groupe.Children.Add(wrapPanel);
-
-            wrapPanel.Children.Add(cb_classes);
-            wrapPanel.Children.Add(cb_enseignants);
-            wrapPanel.Children.Add(cb_matieres);
+            else
+            {
+                WrapPanel wrap = new WrapPanel();
+                foreach (UIElement uiElement in stack_groupe.Children)
+                {
+                    if (uiElement.GetType() == typeof(WrapPanel))
+                    {
+                        if (((WrapPanel)uiElement).Name == "Wrap_" + cbx_name)
+                        {
+                            wrap = (WrapPanel)uiElement;
+                        }
+                    }
+                }
+                stack_groupe.Children.Remove(wrap);
+            }
         }
         private void btn_ajouter_ligne_Click(object sender, RoutedEventArgs e)
         {

@@ -37,5 +37,9 @@ namespace txhmontroland.Pages
             mainWindow.Content = new RecapMatiere(mainWindow,m);
         }
 
+        private void btn_retour_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.Content = new Accueil(mainWindow);
+        }
     }
 }

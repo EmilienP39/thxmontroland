@@ -38,5 +38,10 @@ namespace txhmontroland.Pages
             Enseignant en = AdoEnseignant.getOneLight(Convert.ToInt32(id));
             mainWindow.Content = new ProfRecap(mainWindow,en);
         }
+
+        private void btn_retour_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.Content = new Accueil(mainWindow);
+        }
     }
 }
