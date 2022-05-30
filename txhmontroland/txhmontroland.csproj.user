@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\Accueil.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ClasseRecap.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CreerClasseTest.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CreerConcours.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CreerMatiere.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CreerProf.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ListeClasse.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ListeConcours.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ListeEnseignant.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ListeMatiere.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ProfInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ProfRecap.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\RecapConcours.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\RecapMatiere.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\rick.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\TotalMatiere.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\TRM.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Accueil.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ClasseRecap.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CreerClasseTest.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CreerConcours.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CreerMatiere.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CreerProf.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ListeClasse.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ListeConcours.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ListeEnseignant.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ListeMatiere.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ProfInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ProfRecap.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\RecapConcours.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\RecapMatiere.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\rick.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\TotalMatiere.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\TRM.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

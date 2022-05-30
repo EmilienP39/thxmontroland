@@ -1,0 +1,51 @@
+﻿<Page x:Class="txhmontroland.Pages.RecapMatiere"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:txhmontroland.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1016" d:DesignWidth="1920"
+      Title="RecapMatiere">
+
+    <Grid>
+        <Label Content="Modifier une matière" FontWeight="Bold" FontSize="40" Margin="736,16,735,931"/>
+        <Button x:Name="btn_suppr" Content="Supprimer" BorderBrush="{x:Null}" Background="#FFF30505" Foreground="White" Click="btn_suppr_Click" Margin="1702,24,48,938" FontSize="25"/>
+
+        <Label Grid.Row="0" Content="Nom :" FontWeight="Bold" FontSize="25" Foreground="#FF545454" Margin="914,142,914,826"/>
+        <TextBox x:Name="tbx_nom" TextWrapping="Wrap" Text="" BorderBrush="Gainsboro" GotFocus="tbx_nom_GotFocus" Margin="798,200,804,760" FontSize="25"   />
+
+        <Label Grid.Row="0" Content="Code :" FontWeight="Bold" FontSize="25" Foreground="#FF545454" Margin="912,306,914,664"/>
+        <TextBox x:Name="tbx_code" TextWrapping="Wrap" Text="" BorderBrush="Gainsboro" GotFocus="tbx_code_GotFocus" Margin="744,358,744,608" FontSize="25" />
+
+        <ListBox x:Name="lsbx_codeconcour" d:ItemsSource="{d:SampleData ItemCount=9}" Margin="649,560,679,65" SelectionMode="Multiple" GotFocus="lsbx_codeconcour_GotFocus" FontSize="25"/>
+
+        <Button x:Name="btn_add_cc" Content="Ajouter un nouveau concours" HorizontalAlignment="Left" Margin="725,472,0,0" VerticalAlignment="Top" Width="461" Click="Button_Click" FontSize="25" Height="56"/>
+        <Button x:Name="btn_annuler_add_concour" Content="Annuler" HorizontalAlignment="Left" Height="48" Margin="859,478,0,0" VerticalAlignment="Top" Width="160" Click="btn_annuler_add_concour_Click" FontSize="25"/>
+
+
+
+        <Popup x:Name="Popup1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="auto" Height="auto" IsOpen="False" Margin="0,0,-562,-341" PopupAnimation="Fade">
+            <Border BorderThickness="0.5" CornerRadius="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2" BorderBrush="Black">
+                <TextBlock x:Name="MonTextBlock" Background="LightBlue"><Run Text="Voulez vous vraiment supprimer cette matière ? " BaselineAlignment="Center"/>
+                <Label>
+                    <LineBreak>
+                                                     
+                    </LineBreak>
+                </Label>              
+                
+                <Border BorderThickness="0.5" CornerRadius="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Black">
+                    <Button x:Name="btn_accepter" Content="Oui"/>
+                </Border>
+                <Border BorderThickness="0.5" CornerRadius="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Black">
+                      <Button x:Name="btn_annuler" Content="Annuler"/>
+                </Border>
+
+                </TextBlock>
+            </Border>
+
+        </Popup>
+        <Button x:Name="btn_retour" Grid.Column="0" Content="Retour" Foreground="White" BorderBrush="{x:Null}" Background="#FFFFCF00" Click="btn_retour_Click" Margin="36,29,1728,931" FontSize="25"/>
+        <Button x:Name="btn_creer" Content="Sauvegarder" BorderBrush="{x:Null}" Background="#FFD2007B" Foreground="White" Click="btn_creer_Click" Margin="1674,923,34,33" FontSize="25"/>
+    </Grid>
+</Page>

@@ -1,0 +1,95 @@
+﻿<Page x:Class="txhmontroland.Pages.ClasseRecap"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:txhmontroland.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="ClasseRecap">
+
+    <Grid>
+        <Image Margin="10,10,10,9.6" Source="../Assets/Rectangle 17.png" Stretch="Fill"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80px" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="80px" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30px" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="1" HorizontalAlignment="Left" Content="Modifier une classe" Height="41" Width="236" FontWeight="Bold" FontSize="24" Margin="0,20,0,20"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30px" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1" Grid.ColumnSpan="2" Margin="0,62,29,0">
+                    <StackPanel x:Name="stack_edit_classe" Orientation="Vertical" VerticalAlignment="Top"></StackPanel>
+                </Grid>
+                <Grid Grid.Column="2" Grid.ColumnSpan="2" Margin="0,62,29,0">
+                    <StackPanel x:Name="stack_groupe" Orientation="Vertical" VerticalAlignment="Top"></StackPanel>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="175px" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="175px" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btn_retour" Grid.Column="0" Content="Retour" Height="26" Width="111" Foreground="White" BorderBrush="{x:Null}" Background="#FFFFCF00" Click="btn_retour_Click"/>
+                <Button x:Name="btn_creer" Grid.Column="2" Content="Créer" Height="26" Width="111" BorderBrush="{x:Null}" Background="#FFD2007B" Foreground="White" Click="btn_creer_Click"/>
+                <Button x:Name="btn_ajouter_ligne" Grid.Column="1" Content="Ajouter" Height="26" Width="111" BorderBrush="{x:Null}" Background="#FFD2007B" Foreground="White" Margin="337,27,2,27" Click="Btn_ajouter_ligne_OnClick"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center" Height="56" Margin="0,17,0,0" VerticalAlignment="Top" Width="762">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="280*"/>
+                    <ColumnDefinition Width="101*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Margin="250,-7,152,-7">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20px" />
+                        <RowDefinition Height="30px" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" HorizontalAlignment="Left" Content="Nom :" Height="25" FontWeight="Bold" FontSize="10" Foreground="#FF545454"/>
+                    <TextBox x:Name="tbx_nom" Grid.Row="1" TextWrapping="Wrap" Text="" BorderBrush="Gainsboro" />
+                </Grid>
+                <Grid Margin="432,-7,11,3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20px" />
+                        <RowDefinition Height="30px" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" HorizontalAlignment="Left" Content="Nombre d'élève :" Height="25" FontWeight="Bold" FontSize="10" Foreground="#FF545454"/>
+                    <TextBox x:Name="tbx_nb_eleve" Grid.Row="1" TextWrapping="Wrap" Text="" BorderBrush="Gainsboro"/>
+                </Grid>
+                <Grid Margin="29,-8,26,4" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20px" />
+                        <RowDefinition Height="30px" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" HorizontalAlignment="Left" Content="Division :" Height="25" FontWeight="Bold" FontSize="10" Foreground="#FF545454"/>
+                    <TextBox x:Name="tbx_nb_division" Grid.Row="1" TextWrapping="Wrap" Text="" BorderBrush="Gainsboro"/>
+                </Grid>
+            </Grid>
+            <Grid HorizontalAlignment="Center" Height="52" Margin="0,77,0,0" VerticalAlignment="Top" Width="728" Grid.RowSpan="2">
+                <Label Content="Type de classe" HorizontalAlignment="Left" Height="36" Margin="6,0,0,0" VerticalAlignment="Center" Width="114"/>
+                <RadioButton x:Name="radbut_legt1T" Content="LEGT1°T°" HorizontalAlignment="Left" Margin="131,0,0,20" VerticalAlignment="Bottom"/>
+                <RadioButton x:Name="radbut_legt2" Content="LEGT2°" HorizontalAlignment="Right" Margin="0,0,443,19" VerticalAlignment="Bottom"/>
+                <RadioButton x:Name="radbut_ES" Content="ES" HorizontalAlignment="Left" Margin="307,0,0,19" VerticalAlignment="Bottom" Width="46"/>
+                <RadioButton x:Name="radbut_LEP" Content="LEP" HorizontalAlignment="Left" Margin="361,15,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Page>

@@ -1,0 +1,23 @@
+<Page x:Class="txhmontroland.Pages.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:txhmontroland.Pages"
+      mc:Ignorable="d"
+      Title="Login" Height="1016" Width="1920">
+
+    <Grid>
+        <Label x:Name="lbl_bienvenue" Content="Bienvenue" FontSize="45" Margin="808,212,894,733"></Label>
+        <Button Content="Se connecter" HorizontalAlignment="Left" Margin="792,534,0,0" VerticalAlignment="Top" Height="56" Width="227" Click="Button_Click" FontSize="25"/>
+        <Grid HorizontalAlignment="Left" Height="146" Margin="682,346,0,0" VerticalAlignment="Top" Width="618">
+            <Label Content="Utilisateur : " HorizontalAlignment="Left" Height="43" Margin="32,25,0,0" VerticalAlignment="Top" Width="140" FontSize="25"/>
+            <TextBox x:Name="tbx_utilisateur" HorizontalAlignment="Left" Height="36" Margin="181,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+            <Label x:Name="lbl_erreur_user" Content="Mauvais nom d'utilisateur" HorizontalAlignment="Left" Height="33" Margin="347,32,0,0" VerticalAlignment="Top" Width="236" Foreground="White"/>
+            <Label Content="Mot de passe : " HorizontalAlignment="Left" Height="43" Margin="-3,74,0,0" VerticalAlignment="Top" Width="176" FontSize="25"/>
+            <PasswordBox x:Name="tbx_mdp" HorizontalAlignment="Left" Height="36" Margin="181,75,0,0"  VerticalAlignment="Top" Width="150"/>
+            <Label x:Name="lbl_erreur_password" Content="Mauvais mot de passe" HorizontalAlignment="Left" Height="33" Margin="347,79,0,0" VerticalAlignment="Top" Width="222" Foreground="White"/>
+        </Grid>
+
+    </Grid>
+</Page>

@@ -1,0 +1,45 @@
+﻿<Page x:Class="txhmontroland.Pages.ProfRecap"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:txhmontroland.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1016" d:DesignWidth="1920"
+      Title="ProfRecap">
+
+    <Grid>
+        <Label HorizontalAlignment="Left" Content="Modifier un enseignant" Width="483" FontWeight="Bold" FontSize="40" Margin="738,24,0,921"/>
+        <Button x:Name="btn_suppr" Content="Supprimer" BorderBrush="{x:Null}" Background="#FFF30505" Foreground="White" Click="btn_suppr_Click" Margin="1656,26,67,941" FontSize="25"/>
+
+
+        <Label Grid.Row="0" HorizontalAlignment="Left" Content="Nom :" FontWeight="Bold" FontSize="25" Foreground="#FF545454" Margin="1198,110,0,860"/>
+        <TextBox x:Name="tbx_nom" TextWrapping="Wrap" Text="" BorderBrush="Gainsboro" GotFocus="tbx_nom_GotFocus" Margin="1110,160,550,806" FontSize="25"  />
+
+        <Label Grid.Row="0" HorizontalAlignment="Left" Content="Prénom :" FontWeight="Bold" FontSize="25" Foreground="#FF545454" Margin="676,106,0,864" Width="120"/>
+        <TextBox x:Name="tbx_prenom" TextWrapping="Wrap" Text="" BorderBrush="Gainsboro" GotFocus="tbx_prenom_GotFocus" Margin="594,160,1062,806" FontSize="25" />
+
+
+        <Label Grid.Row="0" Content="Contract :" FontWeight="Bold" FontSize="25" Foreground="#FF545454" Margin="889,259,887,707"/>
+        <RadioButton x:Name="btn_contract_certif" Content="Certifié" HorizontalAlignment="Left" Margin="674,318,0,668" Width="114" GotFocus="btn_contract_certif_GotFocus" FontSize="25"/>
+        <RadioButton x:Name="btn_contract_ma" Content="MA" HorizontalAlignment="Left" Margin="1110,318,0,662" Width="83" GotFocus="btn_contract_ma_GotFocus" FontSize="25"/>
+        <RadioButton x:Name="btn_contract_PLP" Content="PLP" HorizontalAlignment="Left" Margin="990,316,0,662" Width="80" GotFocus="btn_contract_PLP_GotFocus" FontSize="25"/>
+        <RadioButton x:Name="btn_contract_aggreg" Content="Agrégé" HorizontalAlignment="Left" Margin="830,316,0,660" Width="126" GotFocus="btn_contract_aggreg_GotFocus" FontSize="25"/>
+
+        <Label Grid.Row="0" Content="Heures ORS :" FontWeight="Bold" FontSize="25" Foreground="#FF545454" Margin="0,412,853,0" HorizontalAlignment="Right" Width="190" Height="52" VerticalAlignment="Top"/>
+        <ListBox x:Name="lsbx_codeconcour" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="494,621,486,81" SelectionMode="Multiple" GotFocus="lsbx_codeconcour_GotFocus" FontSize="25">
+
+        </ListBox>
+        <Button x:Name="btn_creer" Content="Sauvegarder" BorderBrush="{x:Null}" Background="#FFD2007B" Foreground="White" Click="btn_creer_Click" Margin="1632,941,0,0" FontSize="25" HorizontalAlignment="Left" Width="246" Height="52" VerticalAlignment="Top"/>
+        <Button
+            Background="#FFFFCF00"
+            BorderBrush="{x:Null}"
+            Click="btn_retour_Click"
+            Content="Retour"
+            Foreground="White"
+            Grid.Column="0"
+            x:Name="btn_back" Margin="28,22,1750,949" FontSize="25" />
+        <TextBox x:Name="tbx_ors" TextWrapping="Wrap" Text="" BorderBrush="Gainsboro" GotFocus="tbx_prenom_GotFocus" Margin="828,458,828,512" FontSize="25" />
+        <Label Content="Concours :" HorizontalAlignment="Left" Height="50" Margin="892,570,0,0" VerticalAlignment="Top" Width="144" FontSize="25" Foreground="#FF545454" FontWeight="Bold"/>
+    </Grid>
+</Page>
